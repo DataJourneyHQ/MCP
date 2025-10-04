@@ -1,0 +1,23 @@
+# Version control metadata
+.git
+.gitignore
+.github
+
+# Documentation and local build helpers
+AGENTS.md
+README.md
+Makefile
+
+# Environment configuration
+.env
+.env.example
+
+# Build artifacts and crash dumps
+build/
+erl_crash.dump
+*.beam
+*.ez
+
+# Test and helper scripts (omit if the image requires them)
+test/
+scripts/
