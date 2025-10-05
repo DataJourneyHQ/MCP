@@ -19,6 +19,21 @@ registry so multiple clients can connect simultaneously.
 
 ## Getting Started
 
+### Install Gleam
+
+Install the Gleam toolchain before running the project:
+
+```sh
+# macOS (Homebrew)
+brew install gleam
+
+# Linux (asdf)
+asdf plugin add gleam
+```
+
+See <https://gleam.run/getting-started/installing/> for additional options and
+platform-specific guidance.
+
 ```sh
 gleam deps download
 ```
