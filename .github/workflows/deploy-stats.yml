@@ -1,0 +1,46 @@
+# Workflow for deploying static content to GitHub Pages
+name: DataJourneyHQ/MCP visitor Stats
+
+on:
+  # Scheduled to run daily, after an hour: post repo stats are generated
+  schedule:
+    - cron: "50 0 * * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+
+jobs:
+  deploy:
+    environment:
+        name: github-pages
+        url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-22.04
+
+    steps:
+      - name: Checkout github-repo-stats
+        uses: actions/checkout@v4
+        with:
+          ref: github-repo-stats
+      - name: Change directory and print it
+        run: |
+          cd DataJourneyHQ/MCP/latest-report
+          pwd
+      - name: List files in the current directory
+        run: ls -al
+        working-directory: DataJourneyHQ/MCP/latest-report
+      - name: Rename the file to index.html
+        run: |
+         mv report.html index.html
+        # because GHA pages job, only understands + seeks index keyword for a file name
+        working-directory: DataJourneyHQ/MCP/latest-report
+      - name: Upload HTML files to GitHub Pages
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: DataJourneyHQ/MCP/latest-report/
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
