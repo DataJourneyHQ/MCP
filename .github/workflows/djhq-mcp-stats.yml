@@ -9,7 +9,7 @@ on:
 
 jobs:
   j1:
-    name: djhq-mcp-stats
+    name: github-repo-stats
     runs-on: ubuntu-latest
     steps:
       - name: run-ghrs
