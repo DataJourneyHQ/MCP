@@ -55,4 +55,4 @@ Container workflow: Use the `Makefile` with the included `Dockerfile`.
 
 ## Security
 
-Report security issues privately to contact@datajourneyhq.com per [SECURITY.md](SECURITY.md).
+Report security issues privately to security@datajourneyhq.com per [SECURITY.md](SECURITY.md).
