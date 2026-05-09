@@ -1,0 +1,11 @@
+url_path,views_total,views_unique
+/DataJourneyHQ/MCP/actions,2,2
+/DataJourneyHQ/MCP/labels,2,2
+/DataJourneyHQ/MCP,1,1
+/DataJourneyHQ/MCP/actions/runs/22687280505,1,1
+/DataJourneyHQ/MCP/actions/workflows/djhq-mcp-stats.yml,1,1
+/DataJourneyHQ/MCP/actions/workflows/github-code-scanning/codeql,1,1
+/DataJourneyHQ/MCP/actions/workflows/pages/pages-build-deployment,1,1
+/DataJourneyHQ/MCP/actions/workflows/static.yml,1,1
+/DataJourneyHQ/MCP/actions/workflows/test.yml,1,1
+/DataJourneyHQ/MCP/milestones,1,1
